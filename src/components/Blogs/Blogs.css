@@ -1,0 +1,8 @@
+.blog-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: auto;
+}
+.singleBlog{
+    padding-bottom: 20px;
+}
