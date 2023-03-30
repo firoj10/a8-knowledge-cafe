@@ -12,3 +12,9 @@
     justify-content:space-around;
     align-items: center;
 }
+.btn{
+    border-style: none;
+    border-bottom: 1px solid blue;
+    color: blue;
+    
+}

@@ -1,26 +1,29 @@
 import React from 'react';
 import './SingleBlog.css'
 
-const SingleBlog = ({blog}) => {
-    console.log(blog.category);
+const SingleBlog = (props) => {
+    // console.log(blog.watchTime);
+    const {coverImage,AuthorImage,authorName,publishDate,ReadTime,category}= props.blog;
+    const handleAddToCart = props.handleAddToCart;
     return (
         <div>
              <div className="poster-img ">
-          <img className="w-75" src={blog.coverImage} alt="" />
+          <img className="w-75" src={coverImage} alt="" />
           </div>
           <div className="blogDetails">
           <div className="authorDetals">
-          <img className="authorImage" src={blog.AuthorImage} alt="" />
+          <img className="authorImage" src={AuthorImage} alt="" />
         <div>
-        <h3>{blog.authorName}</h3>
-        <p>{blog.publishDate}</p>
+        <h3>{authorName}</h3>
+        <p>{publishDate}</p>
         </div>
         </div>      
-        <p>{blog.ReadTime}</p>
+        <p>{ReadTime}</p>
         </div>
-        <h2>{blog.category}</h2>
+        <h2>{category}</h2>
         
-        <button><a href="">Mark as read</a></button>
+        <button className='btn' onClick={()=>handleAddToCart(props.blog)}>show card</button>
+        {/* <a onClick={()=>handleAddToCart(props.blog)} href="">show card</a> */}
         <hr/>
         </div>
     );
