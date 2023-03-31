@@ -14,22 +14,30 @@ const SingleBlog = (props) => {
              <div className="poster-img ">
           <img className="w-75" src={coverImage} alt="" />
           </div>
+
           <div className="blogDetails">
           <div className="authorDetals">
           <img className="authorImage" src={AuthorImage} alt="" />
-        <div>
-        <h3>{authorName}</h3>
-        <p>{publishDate}</p>
+        <div className='author-details'>
+        <h4 className='author-name'>{authorName}</h4>
+        <p className='author-bio'>{publishDate}</p>
         </div>
-        </div>      
-        <p>{ReadTime}</p>
-        <button onClick={()=>handleReadTime(props.blog)}><FontAwesomeIcon icon={faBookmark} /></button>
+        </div> 
+
+       <div className='red-minute'>
+       <p>{ReadTime}</p>
+        <button className='feb-icon' onClick={()=>handleReadTime(props.blog)}><FontAwesomeIcon icon={faBookmark} /></button>
+       </div>
         </div>
+
+
         <h2>{category}</h2>
         
-        <button className='btn' onClick={()=>handleAddToCart(props.blog)}>show card</button>
+        <button className='btn' onClick={()=>handleAddToCart(props.blog)}>Mark as read</button>
         {/* <a onClick={()=>handleAddToCart(props.blog)} href="">show card</a> */}
-        <hr/>
+        <div className='border'>
+        <  hr/>
+        </div>
         </div>
     );
 };

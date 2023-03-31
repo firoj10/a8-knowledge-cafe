@@ -7,15 +7,17 @@
     padding-bottom: 20px;
 }
 .card-details{
-    margin: 10px 0 5px 0;
-    padding:20px 10px;
-    margin: 0 20px;
-    border-radius: 5px;
-    /* border: 1px solid blue;
-    color: blue;  */
+    margin-top: 20px ;
+
+    text-align: center;
+
 }
 .showCard{
     background-color: grey;
+    border-radius: 10px;
+}
+.show_alldata{
+    background: rgba(17, 17, 17, 0.05);
 }
 @media screen and (min-width: 320px) and (max-width:575px) {
 

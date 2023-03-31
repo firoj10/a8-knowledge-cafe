@@ -46,12 +46,14 @@ const Blogs = () => {
               
         }</div>
      
-          <div className='card-details'>
+         <div className='show_alldata'>
+         <div className='card-details'>
           <h3>Bookmarked Blogs :{ singlecart.length} </h3>
           </div>
         {
          singlecart.map((s)=><BlogTitle s={s}></BlogTitle>)
         }
+         </div>
     
  
 
