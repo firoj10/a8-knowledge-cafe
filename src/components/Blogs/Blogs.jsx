@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import ShowCard from '../ShowCard/ShowCard';
 import SingleBlog from '../SingleBlog/SingleBlog';
 import './Blogs.css'
+import BlogTitle from '../BlogTitle/BlogTitle';
 
 const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
     const [cart, setCart]=useState([]);
+    const [singlecart, setSinglecartt]=useState([]);
     useEffect(() => {
         fetch("data.json")
           .then((res) => res.json())
@@ -17,20 +19,41 @@ const Blogs = () => {
                 const newCart = [...cart, product];
         setCart(newCart);
        
+      }
+      const handleReadTime = (product) =>{
+        const getTitle = singlecart.find(sc=>sc.id===product.id);
+        if(getTitle){
+          alert('no access')
+          return;
         }
-
-
-
+                const singleBlg = [...singlecart, product];
+                setSinglecartt (singleBlg);
+       
+      }
     return (
         <div className="blog-container">
         <div className="singleBlog">
           {blogs.map((blog) => (
-           <SingleBlog blog={blog}  handleAddToCart={handleAddToCart} ></SingleBlog>
+           <SingleBlog blog={blog}  handleAddToCart={handleAddToCart} handleReadTime={handleReadTime} ></SingleBlog>
           ))}
         
         </div>
-        <div className='showCard'>
-<ShowCard cart={cart}></ShowCard>
+        <div className='showCar'>
+        
+      <div>  {
+             <ShowCard  cart={cart}  ></ShowCard>
+              
+        }</div>
+     
+          <div className='card-details'>
+          <h3>Bookmarked Blogs :{ singlecart.length} </h3>
+          </div>
+        {
+         singlecart.map((s)=><BlogTitle s={s}></BlogTitle>)
+        }
+    
+ 
+
         </div>
       </div>
     );

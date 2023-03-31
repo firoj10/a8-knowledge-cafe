@@ -5,6 +5,8 @@ const SingleBlog = (props) => {
     // console.log(blog.watchTime);
     const {coverImage,AuthorImage,authorName,publishDate,ReadTime,category}= props.blog;
     const handleAddToCart = props.handleAddToCart;
+    const handleReadTime = props.handleReadTime;
+
     return (
         <div>
              <div className="poster-img ">
@@ -19,6 +21,7 @@ const SingleBlog = (props) => {
         </div>
         </div>      
         <p>{ReadTime}</p>
+        <button onClick={()=>handleReadTime(props.blog)}></button>
         </div>
         <h2>{category}</h2>
         

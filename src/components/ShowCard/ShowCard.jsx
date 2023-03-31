@@ -1,19 +1,20 @@
 import React from 'react';
 import './ShowCard.css'
 const ShowCard = ({cart}) => {
-    let totalPrice = 0;
-
-    for (const product of cart){
-       
-        totalPrice = totalPrice+product.watchTime ;
-        
+ 
+    let totalwatchTime = 0;
+    for (const watchTime of cart){ 
+        totalwatchTime = totalwatchTime+watchTime.watchTime ;
     }
-console.log(totalPrice)
     return (
-        <div className='show-card'>
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-            <p>Spent time on read : {totalPrice} min</p>
+        <div>
+  <div className='show-card'>
+            <h2 className='total-watchtime'>Spent time on read : { totalwatchTime} min</h2>
         </div>
+      
+        </div>
+     
+
     );
 };
 

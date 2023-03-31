@@ -1,0 +1,14 @@
+.blog-details p{
+  
+    /* padding:5px;
+    margin: 5px; */
+    border-radius: 5px;
+    background-color: rgb(229, 241, 241);
+
+}
+.blog-details{
+  
+  
+    background-color: rgb(217, 225, 225);
+
+}
