@@ -4,10 +4,10 @@ const Header = () => {
     return (
         <>
         <div className='header'>
-            <div>
+          
             <h2>Knowledge Cafe</h2>
-            </div>
-            <div>
+            
+            <div className='navItems'>
                 <a href="">Home</a>
                 <a href="">About</a>
                 <a href="">Services</a>

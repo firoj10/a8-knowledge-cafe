@@ -24,7 +24,7 @@ const Blogs = () => {
       const handleReadTime = (product) =>{
         const getTitle = singlecart.find(sc=>sc.id===product.id);
         if(getTitle){
-          toast("Wow so easy!")
+          toast(" Blog already exists")
           return;
         }
                 const singleBlg = [...singlecart, product];

@@ -19,6 +19,7 @@
 .show_alldata{
     background: rgba(17, 17, 17, 0.05);
 }
+
 @media screen and (min-width: 320px) and (max-width:575px) {
 
         .blog-container{
@@ -26,5 +27,8 @@
             grid-template-columns: 1fr ;
             gap: auto;
      
+    }
+    .cover-img{
+        object-fit: cover
     }
   }

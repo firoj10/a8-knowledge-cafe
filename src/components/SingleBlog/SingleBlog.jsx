@@ -12,7 +12,7 @@ const SingleBlog = (props) => {
     return (
         <div>
              <div className="poster-img ">
-          <img className="w-75" src={coverImage} alt="" />
+          <img className="cover-img" src={coverImage} alt="" />
           </div>
 
           <div className="blogDetails">
