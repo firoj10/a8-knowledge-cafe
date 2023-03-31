@@ -3,6 +3,7 @@ import ShowCard from '../ShowCard/ShowCard';
 import SingleBlog from '../SingleBlog/SingleBlog';
 import './Blogs.css'
 import BlogTitle from '../BlogTitle/BlogTitle';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
@@ -23,7 +24,7 @@ const Blogs = () => {
       const handleReadTime = (product) =>{
         const getTitle = singlecart.find(sc=>sc.id===product.id);
         if(getTitle){
-          alert('no access')
+          toast("Wow so easy!")
           return;
         }
                 const singleBlg = [...singlecart, product];
