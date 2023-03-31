@@ -12,6 +12,10 @@ const QAnswer = () => {
                 <h2>How does useState work?</h2>
                 <p>useState is React Hook that allows you to add state to a functional component. It returns an array with two values: the current state and a function to update it</p>
             </div>
+            <div>
+                <h2>Purpose of useEffect other than fetching data.?</h2>
+                <p>The useEffect in react js allows you to perform side effects in your components. The react useEffect examples of side effects include retrieving data, direct DOM updates, and timers.</p>
+            </div>
            
         </div>
     );
